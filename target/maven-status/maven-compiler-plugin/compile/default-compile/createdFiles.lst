@@ -1,0 +1,6 @@
+br\com\topSIS\model\Endereco.class
+br\com\topSIS\model\Dependente.class
+br\com\topSIS\model\Contratante.class
+br\com\topSIS\controller\Indexcontroller.class
+br\com\topSIS\model\Usuario.class
+br\com\topSIS\model\Telefone.class
