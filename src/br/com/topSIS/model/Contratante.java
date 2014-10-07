@@ -1,5 +1,6 @@
 package br.com.topSIS.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
@@ -21,6 +22,7 @@ public class Contratante extends Usuario {
 	private String[] dependente;
 	private String[] dataNascimento;
 	private Plano plano;
+	private String dataTable;
 
 	@Lob
 	public String  getFoto() {
@@ -41,6 +43,8 @@ public class Contratante extends Usuario {
 	}
 
 	public Date getDataCadastro() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		setDataTable(dateFormat.format(dataCadastro));
 		return dataCadastro;
 	}
 
@@ -73,6 +77,16 @@ public class Contratante extends Usuario {
 
 	public void setPlano(Plano plano) {
 		this.plano = plano;
+	}
+
+	@Transient
+	public String getDataTable() {
+		getDataCadastro();
+		return dataTable;
+	}
+
+	public void setDataTable(String dataTable) {
+		this.dataTable = dataTable;
 	}
 
 }

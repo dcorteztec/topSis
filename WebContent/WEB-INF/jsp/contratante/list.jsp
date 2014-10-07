@@ -60,21 +60,27 @@
 										class="table table-striped table-bordered table-hover table-green">
 										<thead>
 											<tr>
+												<th>Matrícula</th>
 												<th>Nome</th>
-												<th>Cpf</th>
-												<th>CRO/CRM</th>
-												<th>CEI</th>
-												<th>Continuar</th>
+												<th>Data de Cadastro</th>
+												<th>Telefones</th>
+												<th>Plano</th>
+												<th>Valor</th>
+												<th>Editar</th>
+												<th>Desabilitar</th>
 											</tr>
 										</thead>
 										<tbody>
-										<c:forEach var="cli" items="${perfil.clientes}" varStatus="loopStatus">
+										<c:forEach var="cli" items="${contratante}" varStatus="loopStatus">
 											<tr class="odd gradeX">
+												<td>${cli.matricula}</td>
 												<td>${cli.nome}</td>
-												<td>${cli.cpfcnpj}</td>
-												<td>${cli.cei}</td>
-												<td>${cli.crocrm}</td>
-												<td class="center"><a href="<c:url value="/cliente/chosen/${cli.codCliente}"/>" class="btn btn-blue" >Cont</a></td>
+												<td>${cli.dataTable}</td>
+												<td>${cli.telefone.telCasa} - ${cli.telefone.cel}</td>
+												<td>${cli.plano.nomePlano}</td>
+												<td>${cli.plano.valor}</td>
+												<td class="center"><a href="/topSIS/contratante/formEdit/${cli.matricula}" class="btn btn-blue" data-toggle="modal">Edit</a></td>
+												<td class="center"><a href="/previsaocontabil/areasolicitacao/delete/${areaS.codAreaSolicitacao}" class="btn btn-blue" data-toggle="modal" onclick="return confirm('Deseja remover essa Área ?');">Del</a></td>
 											</tr>
 										</c:forEach>	
 										</tbody>

@@ -33,7 +33,7 @@
 						<div class="page-title">
 							<h1>Cadastrar Cliente</h1>
 							<ol class="breadcrumb">
-								<li><i class="fa fa-dashboard"></i> <a href="index.html">Home</a>
+								<li><i class="fa fa-dashboard"></i> <a href="<c:url value="/"/>">Home</a>
 								</li>
 								<li class="active">Cadastrar Cliente</li>
 							</ol>
@@ -189,7 +189,7 @@
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Complemento</label> <input
 															type="text" class="form-control"
-															id="contratante.complemento" maxlength="20" required=""
+															id="contratante.complemento" maxlength="20"
 															name="contratante.endereco.complemento"
 															placeholder="Complemento">
 													</div>
@@ -225,10 +225,9 @@
 														<div class="col-sm-4">
 															<label for="exampleInputEmail1">Plano</label> <select
 																name="contratante.plano.nomePlano" id="nomePlano">
-																<option value="familiar">Plano Familiar</option>
-																<option value="intermediario">Plano
-																	Intermediário</option>
-																<option value="individual">Plano Indívidual</option>
+																<option value="Familiar">Plano Familiar</option>
+																<option value="Intermediário">Plano Intermediário</option>
+																<option value="Indívidual">Plano Indívidual</option>
 															</select> <label for="exampleInputEmail1">Valor</label> <input
 																type="text" class="form-control"
 																id="contratante.plano.valor" maxlength="5"

@@ -17,11 +17,12 @@ public class Usuario {
 	private String nome;
 	private String nomeMae;
 	private Date dataNasc;
-	private Character sexo;
+	private String sexo;
 	private String cpf;
 	private String email;
 	private Endereco endereco;
 	private Telefone telefone;
+	private boolean indHabilitado;
 
 	private String tipo;
 	
@@ -50,10 +51,10 @@ public class Usuario {
 	public void setDataNasc(Date dataNasc) {
 		this.dataNasc = dataNasc;
 	}
-	public Character getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
-	public void setSexo(Character sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 	public String getCpf() {
@@ -87,6 +88,12 @@ public class Usuario {
 	}
 	public void setTelefone(Telefone telefone) {
 		this.telefone = telefone;
+	}
+	public boolean isIndHabilitado() {
+		return indHabilitado;
+	}
+	public void setIndHabilitado(boolean indHabilitado) {
+		this.indHabilitado = indHabilitado;
 	}
 
 	

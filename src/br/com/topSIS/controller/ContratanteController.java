@@ -3,10 +3,13 @@ package br.com.topSIS.controller;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
@@ -34,7 +37,26 @@ public class ContratanteController {
 	public void form() {
 
 	}
+	
+	@Path("/contratante/list")
+	public void list() {
+ 
+		List<Contratante> list = new ArrayList<Contratante>();
+		list = contratanteDAO.listContratante();
+		result.include("contratante", list);
+		
+	}
 
+	@Path("/contratante/formEdit/{contratante.matricula}")
+	@Get
+	public void formEdit(Contratante contratante) {
+
+		Contratante contra = contratanteDAO.findById(contratante.getMatricula());
+		
+		result.include("contratante", contra);
+		
+	}
+	
 	@Path("/contratante/areaSaveOrUpdate")
 	@Post
 	public void addOrUpdate(Contratante contratante) throws ParseException {
@@ -66,6 +88,6 @@ public class ContratanteController {
 		result.redirectTo(IndexController.class).index();
 	}
 		result.include("errorMsg", "Matricula Já cadastrada");
-		result.redirectTo(IndexController.class).index();
+		result.redirectTo(this).list();
 	}
 }

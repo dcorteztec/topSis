@@ -42,7 +42,7 @@
 					<!--                             </li> -->
 					<li><a href="<c:url value="/contratante/form"/>">
  							<i class="fa fa-angle-double-right"></i>Cadastrar</a></li>
- 					<li><a href="<c:url value="/contratante/listAll"/>">
+ 					<li><a href="<c:url value="/contratante/list"/>">
  							<i class="fa fa-angle-double-right"></i>Listar Clientes</a></li>		 					
 				</ul></li> 
 
