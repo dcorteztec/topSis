@@ -24,5 +24,29 @@ public class ContratanteDAOImpl extends GenericDAOImpl<Contratante, Long> implem
 		return (List<Contratante>) query.list();
 
 	}
+	
+	public Contratante findContratanteByid(Long matricula) {
+		String hql = "FROM Contratante c WHERE c.tipo = 'C' and c.matricula = :matricula ";
+		Query query = session.createQuery(hql).setParameter("matricula", matricula);
+		return (Contratante) query.uniqueResult();
+
+	}
+	
+	public void desabilitar (Long matricula) {
+		String sql = "UPDATE Usuario SET indHabilitado = true WHERE matricula = :matricula ";
+
+		Query query = session.createSQLQuery(sql).setParameter("matricula", matricula);
+
+		query.executeUpdate();
+	
+	}
+	public void habilitar (Long matricula) {
+		String sql = "UPDATE Usuario SET indHabilitado = false WHERE matricula = :matricula ";
+
+		Query query = session.createSQLQuery(sql).setParameter("matricula", matricula);
+
+		query.executeUpdate();
+	
+	}
 
 }

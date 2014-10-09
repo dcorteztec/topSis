@@ -1,6 +1,5 @@
-$(document)
-		.ready(
-				function() {
+$(window).load(function() {
+	if(window.location.pathname == "/topSIS/contratante/form"){
 					$("#webcam").scriptcam({
 						path : '/topSIS/js/enterprise/',
 						showMicrophoneErrors : false,
@@ -11,11 +10,10 @@ $(document)
 						appID : 'BB6EA93A-66',
 					// onPictureAsBase64:base64_tofield_and_image
 					});
-
+					$('#clienteTable').dataTable();
 					$("#addDep")
 							.click(
-									function() {
-										$("#dataDep").mask("99/99/9999");
+									function() {;
 										$("#divDependente")
 												.append(
 														" <div class='row' id='dependentes'> "
@@ -29,12 +27,15 @@ $(document)
 																+ " <label for='exampleInputEmail1'>Nasc</label> "
 																+ " <input "
 																+ " type='text' class='form-control' "
-																+ "  name='contratante.dataNascimento[]' onkeyup='mascara(this, mdata);'  " +
-																	"maxlength='10' placeholder='Data Nascimento' required=''> "
+																+ "  name='contratante.dataNascimento[]' onkeyup='mascara(this, mdata);'  "
+																+ "maxlength='10' placeholder='Data Nascimento' required=''> "
 																+ " </div> "
 																+ " </div>");
 									});
+
+	}
 				});
+
 function base64_tofield() {
 	$('#formfield').val($.scriptcam.getFrameAsBase64());
 };
@@ -60,20 +61,4 @@ function onWebcamReady(cameraNames, camera, microphoneNames, microphone, volume)
 		$('#cameraNames').append($('<option></option>').val(index).html(text));
 	});
 	$('#cameraNames').val(camera);
-}
-function mascara(o, f) {
-	v_obj = o;
-	v_fun = f;
-	setTimeout("execmascara()", 1);
-}
-function execmascara() {
-	v_obj.value = v_fun(v_obj.value);
-}
-function mdata(v) {
-	v = v.replace(/\D/g, ""); // Remove tudo o que não é dígito
-	v = v.replace(/(\d{2})(\d)/, "$1/$2");
-	v = v.replace(/(\d{2})(\d)/, "$1/$2");
-
-	v = v.replace(/(\d{2})(\d{2})$/, "$1$2");
-	return v;
 }

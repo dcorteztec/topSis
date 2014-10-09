@@ -67,7 +67,7 @@
 												<th>Plano</th>
 												<th>Valor</th>
 												<th>Editar</th>
-												<th>Desabilitar</th>
+												<th>HAB/Desabilitar</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -80,7 +80,12 @@
 												<td>${cli.plano.nomePlano}</td>
 												<td>${cli.plano.valor}</td>
 												<td class="center"><a href="/topSIS/contratante/formEdit/${cli.matricula}" class="btn btn-blue" data-toggle="modal">Edit</a></td>
-												<td class="center"><a href="/previsaocontabil/areasolicitacao/delete/${areaS.codAreaSolicitacao}" class="btn btn-blue" data-toggle="modal" onclick="return confirm('Deseja remover essa Área ?');">Del</a></td>
+												<c:if test="${cli.indHabilitado eq false}">
+												<td class="center"><a href="/topSIS/contratante/desabilitar/${cli.matricula}" class="btn btn-blue" data-toggle="modal" onclick="return confirm('Deseja DESABILITAR esse Cliente ?');">Del</a></td>
+												</c:if>
+												<c:if test="${cli.indHabilitado eq true}">
+												<td class="center"><a href="/topSIS/contratante/habilitar/${cli.matricula}" class="btn btn-blue" data-toggle="modal" onclick="return confirm('Deseja HABILITAR esse Cliente ?');">Add</a></td>
+												</c:if>
 											</tr>
 										</c:forEach>	
 										</tbody>

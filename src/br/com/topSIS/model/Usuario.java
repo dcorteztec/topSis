@@ -1,5 +1,6 @@
 package br.com.topSIS.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -23,6 +24,7 @@ public class Usuario {
 	private Endereco endereco;
 	private Telefone telefone;
 	private boolean indHabilitado;
+	private String dateEdit;
 
 	private String tipo;
 	
@@ -69,7 +71,7 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	@OneToOne(mappedBy = "usuario",cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "usuario",cascade = CascadeType.ALL, orphanRemoval = true)
 	public Endereco getEndereco() {
 		return endereco;
 	}
@@ -82,7 +84,7 @@ public class Usuario {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	@OneToOne(mappedBy = "usuario",cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "usuario",cascade = CascadeType.ALL, orphanRemoval = true)
 	public Telefone getTelefone() {
 		return telefone;
 	}
@@ -94,6 +96,14 @@ public class Usuario {
 	}
 	public void setIndHabilitado(boolean indHabilitado) {
 		this.indHabilitado = indHabilitado;
+	}
+	public String getDateEdit() {
+		SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
+		dateEdit = DATE_FORMAT.format(getDataNasc());
+		return dateEdit;
+	}
+	public void setDateEdit(String dateEdit) {
+		this.dateEdit = dateEdit;
 	}
 
 	

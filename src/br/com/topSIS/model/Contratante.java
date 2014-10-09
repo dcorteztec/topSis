@@ -18,11 +18,13 @@ public class Contratante extends Usuario {
 
 	private String foto;
 	private Set<Dependente> dependentes;
+	private Long[] idDependente;
 	private Date dataCadastro;
 	private String[] dependente;
 	private String[] dataNascimento;
 	private Plano plano;
 	private String dataTable;
+	private String funcionario;
 
 	@Lob
 	public String  getFoto() {
@@ -87,6 +89,23 @@ public class Contratante extends Usuario {
 
 	public void setDataTable(String dataTable) {
 		this.dataTable = dataTable;
+	}
+
+	@Transient
+	public Long[] getIdDependente() {
+		return idDependente;
+	}
+
+	public void setIdDependente(Long[] idDependente) {
+		this.idDependente = idDependente;
+	}
+
+	public String getFuncionario() {
+		return funcionario;
+	}
+
+	public void setFuncionario(String funcionario) {
+		this.funcionario = funcionario;
 	}
 
 }
