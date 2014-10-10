@@ -35,15 +35,22 @@
 					class="fa fa-caret-down"></i>
 			</a>
 				<ul class="collapse nav in" id="forms">
-					<!--                             <li> -->
-					<%--                                 <a class="active" href="<c:url value="/areasolicitacao/form"/>"> --%>
-					<!--                                     <i class="fa fa-angle-double-right"></i> Cadastrar Área -->
-					<!--                                 </a> -->
-					<!--                             </li> -->
 					<li><a href="<c:url value="/contratante/form"/>">
  							<i class="fa fa-angle-double-right"></i>Cadastrar</a></li>
  					<li><a href="<c:url value="/contratante/list"/>">
  							<i class="fa fa-angle-double-right"></i>Listar Clientes</a></li>		 					
+				</ul></li> 
+				<li class="panel"><a href="javascript:;" data-parent="#side"
+				data-toggle="collapse" class="accordion-toggle" data-target="#forms">
+					<i class="fa fa-edit"></i> Funcionário <i
+					class="fa fa-caret-down"></i>
+			</a>
+				<ul class="collapse nav in" id="forms">
+					
+					<li><a href="<c:url value="/funcionario/form"/>">
+ 							<i class="fa fa-angle-double-right"></i>Cadastrar</a></li>
+ 					<li><a href="<c:url value="/funcionario/list"/>">
+ 							<i class="fa fa-angle-double-right"></i>Listar Funcionários</a></li>		 					
 				</ul></li> 
 
 		</ul>

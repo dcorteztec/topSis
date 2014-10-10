@@ -216,11 +216,11 @@
 			<artifactId>pdfbox</artifactId>
 			<version>1.8.2</version>
 		</dependency>
-		<dependency>
-			<groupId>com.google.code</groupId>
-			<artifactId>saci</artifactId>
-			<version>1.1</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.google.code</groupId> -->
+<!-- 			<artifactId>saci</artifactId> -->
+<!-- 			<version>1.1</version> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>net.sf.scannotation</groupId>
 			<artifactId>scannotation</artifactId>

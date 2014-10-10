@@ -2,8 +2,8 @@ package br.com.topSIS.controller;
 
 import java.text.ParseException;
 
-import net.diegomaia.vraptor.saci.annotation.AccessDeniedPage;
-import net.diegomaia.vraptor.saci.annotation.LoginPage;
+//import net.diegomaia.vraptor.saci.annotation.AccessDeniedPage;
+//import net.diegomaia.vraptor.saci.annotation.LoginPage;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
@@ -33,23 +33,23 @@ public class IndexController {
 
 	}
 	
-	@Path("/logout")
-	public void logout() {
-
-		usuarioComponente.setLoggedIn(false);
-		result.redirectTo(this).login();
-	}
+//	@Path("/logout")
+//	public void logout() {
+//
+//		usuarioComponente.setLoggedIn(false);
+//		result.redirectTo(this).login();
+//	}
 	
-	@LoginPage
-	@Get
-	public void login() {
-
-	}
-	
-	@Get
-    @AccessDeniedPage
-    public void forbidden() {
-    }
+//	@LoginPage
+//	@Get
+//	public void login() {
+//
+//	}
+//	
+//	@Get
+//    @AccessDeniedPage
+//    public void forbidden() {
+//    }
 	
 	@Path("/loged")
 	@Post

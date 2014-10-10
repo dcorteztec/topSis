@@ -7,6 +7,7 @@ import org.hibernate.Session;
 
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.topSIS.DAO.interfaces.ContratanteDAO;
+import br.com.topSIS.DAO.impl.GenericDAOImpl;
 import br.com.topSIS.model.Contratante;
 
 @Component

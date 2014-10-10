@@ -18,7 +18,6 @@ import br.com.caelum.vraptor.Validator;
 import br.com.topSIS.DAO.interfaces.ContratanteDAO;
 import br.com.topSIS.model.Contratante;
 import br.com.topSIS.model.Dependente;
-import br.com.topSIS.model.Usuario;
 
 @Resource
 public class ContratanteController {
