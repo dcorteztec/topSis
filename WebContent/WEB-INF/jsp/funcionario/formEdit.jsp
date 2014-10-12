@@ -72,14 +72,13 @@
 										<div class="portlet-body">
 											<form role="form" action="<c:url value="/funcionario/add"/>"
 												method="post">
-												<input type="hidden" id="tipo" name="funcionario.tipo"
-													value="F"></input>
+                                                <input type="hidden" id="tipo" name="funcionario.tipo" value="F"></input>
 												<div class="row">
 													<div class="col-sm-6">
 														<label for="exampleInputEmail1">Matricula</label> <input
 															class="form-control" id="funcionario.matricula"
 															maxlength="10" required="Campo matricula"
-															name="funcionario.matricula" placeholder="Matricula">
+															name="funcionario.matricula" placeholder="Matricula" value="${funcionario.matricula}">
 													</div>
 												</div>
 												<div class="row">
@@ -87,7 +86,7 @@
 														<label for="exampleInputEmail1">Nome</label> <input
 															class="form-control" id="funcionario.nome"
 															maxlength="100" required="" name="funcionario.nome"
-															placeholder="Nome">
+															placeholder="Nome" value="${funcionario.nome}">
 													</div>
 												</div>
 												<div class="row">
@@ -95,12 +94,14 @@
 													<div class="col-sm-10">
 														<div class="radio">
 															<label class="checkbox-inline"> <input
-																type="radio" value="1" id="adm" name="funcionario.roles">Administrador
+																type="radio" value="1" id="adm" name="funcionario.roles" 
+																<c:if test="${funcionario.roles eq 1}">checked="checked"</c:if>/>Administrador
 															</label>
 														</div>
 														<div class="radio">
 															<label class="checkbox-inline"> <input
-																type="radio" name="funcionario.roles" id="usr" value="0">Usuário
+																type="radio" name="funcionario.roles" id="usr" value="0" 
+																<c:if test="${funcionario.roles eq 0}">checked="checked"</c:if>/>Usuário
 															</label>
 														</div>
 													</div>
@@ -109,14 +110,13 @@
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Login</label> <input
 															class="form-control" required="" id="funcionario.login"
-															maxlength="12" name="funcionario.login"
-															placeholder="Login">
+															maxlength="12" name="funcionario.login" placeholder="Login" value="${funcionario.login}">
 													</div>
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Senha</label> <input
 															type="password" class="form-control"
 															id="funcionario.senha" maxlength="50"
-															name="funcionario.senha" equired="" placeholder="Senha">
+															name="funcionario.senha" equired="" placeholder="Senha" value="${funcionario.senha}">
 													</div>
 												</div>
 												<div class="row">
@@ -126,19 +126,19 @@
 														<div id="sandbox-container">
 															<input class="form-control"
 																onkeyup="mascara(this, mdata);" id="dataNascimento"
-																maxlength="10" name="funcionario.dataNasc">
+																maxlength="10" name="funcionario.dataNasc" value="${funcionario.dataNasc}">
 														</div>
 													</div>
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">CPF</label> <input
 															class="form-control" id="funcionario.cpf" maxlength="12"
-															name="funcionario.cpf" placeholder="CPF">
+															name="funcionario.cpf" placeholder="CPF" value="${funcionario.cpf}">
 													</div>
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Email</label> <input
 															type="email" class="form-control" id="funcionario.email"
 															maxlength="50" name="funcionario.email"
-															placeholder="Email">
+															placeholder="Email" value="${funcionario.email}">
 													</div>
 												</div>
 												<div class="row">
@@ -147,12 +147,13 @@
 														<div class="radio">
 															<label> <input type="radio"
 																name="funcionario.sexo" id="funcionario.sexo" value="F"
-																checked>Feminino
+																<c:if test="${funcionario.sexo eq 'F'}">checked="checked"</c:if>/>Feminino
 															</label>
 														</div>
 														<div class="radio">
 															<label> <input type="radio"
-																name="funcionario.sexo" id="funcionario.sexo" value="M">Masculino
+																name="funcionario.sexo" id="funcionario.sexo" value="M"
+																<c:if test="${funcionario.sexo eq 'M'}">checked="checked"</c:if>/>Masculino
 															</label>
 														</div>
 													</div>
@@ -162,58 +163,65 @@
 														<label for="exampleInputEmail1">Telefone Fixo</label> <input
 															class="form-control" id="funcionario.telefone"
 															maxlength="8" required=""
-															name="funcionario.telefone.telCasa" placeholder="Fixo">
+															name="funcionario.telefone.telCasa" placeholder="Fixo" value="${funcionario.telefone.telCasa}">
 													</div>
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Celular</label> <input
 															type="text" class="form-control" id="funcionario.cel"
 															maxlength="9" required="" name="funcionario.telefone.cel"
-															placeholder="Celular">
+															placeholder="Celular" value="${funcionario.telefone.cel}">
 													</div>
 												</div>
-												<div class="row">
+													<div class="row">
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">CEP</label> <input
 															type="text" class="form-control" id="cep" maxlength="9"
-															name="funcionario.endereco.cep" placeholder="CEP">
+															name="funcionario.endereco.cep" placeholder="CEP" value="${funcionario.endereco.cep}">
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-sm-10">
 														<label for="exampleInputEmail1">Logradouro</label> <input
-															class="form-control" id="rua" maxlength="40"
-															name="funcionario.endereco.logradouro"
-															placeholder="Logradouro">
+															class="form-control" id="rua"
+															maxlength="40" name="funcionario.endereco.logradouro"
+															placeholder="Logradouro" value="${funcionario.endereco.logradouro}">
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Número</label> <input
-															class="form-control" id="numero" maxlength="8"
-															name="funcionario.endereco.numero" placeholder="Número">
+															class="form-control" id="numero"
+															maxlength="8" name="funcionario.endereco.numero"
+															placeholder="Número" value="${funcionario.endereco.numero}">
 													</div>
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Complemento</label> <input
-															type="text" class="form-control" id="complemento"
-															maxlength="20" name="funcionario.endereco.complemento"
-															placeholder="Complemento">
+															type="text" class="form-control"
+															id="complemento" maxlength="20"
+															name="funcionario.endereco.complemento"
+															placeholder="Complemento" value="${funcionario.endereco.complemento}">
 													</div>
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Cidade</label> <input
-															class="form-control" id="cidade" maxlength="20"
-															name="funcionario.endereco.cidade" placeholder="Cidade">
+															class="form-control" id="cidade"
+															maxlength="20" name="funcionario.endereco.cidade"
+															placeholder="Cidade" value="${funcionario.endereco.cidade}">
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Bairro</label> <input
-															class="form-control" id="bairro" maxlength="20"
-															name="funcionario.endereco.bairro" placeholder="Bairro">
+															class="form-control" id="bairro"
+															maxlength="20" 
+															name="funcionario.endereco.bairro" placeholder="Bairro"
+															value="${funcionario.endereco.bairro}">
 													</div>
 													<div class="col-sm-2">
 														<label for="exampleInputEmail1">UF</label> <input
-															type="text" class="form-control" id="uf" maxlength="2"
-															name="funcionario.endereco.uf" placeholder="UF">
+															type="text" class="form-control"
+															id="uf" maxlength="2" 
+															name="funcionario.endereco.uf" placeholder="UF"
+															value="${funcionario.endereco.uf}">
 													</div>
 												</div>
 

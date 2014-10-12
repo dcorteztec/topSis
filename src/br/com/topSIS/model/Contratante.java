@@ -25,6 +25,7 @@ public class Contratante extends Usuario {
 	private Plano plano;
 	private String dataTable;
 	private String funcionario;
+	private String fucnionarioEdit;
 
 	@Lob
 	public String  getFoto() {
@@ -106,6 +107,14 @@ public class Contratante extends Usuario {
 
 	public void setFuncionario(String funcionario) {
 		this.funcionario = funcionario;
+	}
+
+	public String getFucnionarioEdit() {
+		return fucnionarioEdit;
+	}
+
+	public void setFucnionarioEdit(String fucnionarioEdit) {
+		this.fucnionarioEdit = fucnionarioEdit;
 	}
 
 }

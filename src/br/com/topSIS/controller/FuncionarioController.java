@@ -3,6 +3,8 @@ package br.com.topSIS.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.diegomaia.vraptor.saci.annotation.LoggedIn;
+import net.diegomaia.vraptor.saci.annotation.Roles;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
@@ -12,7 +14,9 @@ import br.com.topSIS.DAO.interfaces.FuncionarioDAO;
 import br.com.topSIS.model.Funcionario;
 import br.com.topSIS.utils.Util;
 
+@LoggedIn
 @Resource
+@Roles(roles={ "ADMINISTRADOR"})
 public class FuncionarioController {
 
 	private final Result result;
@@ -31,6 +35,13 @@ public class FuncionarioController {
 		
 	}
 	
+	@Path("/funcionario/formEdit/{funcionario.matricula}")
+	public void formEdit(Funcionario funcionario){
+		Funcionario func = funcionarioDAO.findById(funcionario.getMatricula());
+
+		result.include("funcionario", func);
+	}
+	
 	@Path("/funcionario/add")
 	@Post
 	public void add(Funcionario funcionario){
@@ -38,7 +49,9 @@ public class FuncionarioController {
 		funcionario.setSenha(Util.getInstance().crypt(funcionario.getSenha()));
 		funcionario.getEndereco().setUsuario(funcionario);
 		funcionario.getTelefone().setUsuario(funcionario);
+	
         funcionarioDAO.addOrUpdate(funcionario);
+        result.redirectTo(this).list();
         
 	}
 	

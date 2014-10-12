@@ -45,39 +45,39 @@
 
 
 							<!-- Basic Form Example -->
-<!-- 							<div class="col-lg-12"> -->
-<!-- 								<div id="basicFormExample"> -->
-<!-- 									<form class="formBasic" role="form" -->
-<%-- 										action="<c:url value="/sendMail"/>" method="post"> --%>
-<!-- 										<div class="form-group"> -->
-<!-- 											<div class="col-sm-12"> -->
-<!-- 												<select class="form-control" -->
-<!-- 													name="areaSolicitacao.atendimento"> -->
-<!-- 													<option value="mg">Atendimento MG</option> -->
-<!-- 													<option value="rj">Atendimento RJ</option> -->
-<!-- 												</select> -->
-<!-- 											</div> -->
-<!-- 											<div class="col-sm-12" style="margin: 5px 0;"> -->
-<!-- 												<select class="form-control" -->
-<!-- 													name="areaSolicitacao.codAreaSolicitacao"> -->
-<%-- 													<c:forEach var="areaS" items="${perfil.areaSolicList}"> --%>
-<%-- 														<option value="${areaS.codAreaSolicitacao}">${areaS.nomeArea}</option> --%>
-<%-- 													</c:forEach> --%>
-<!-- 												</select> -->
-<!-- 											</div> -->
-<!-- 										</div> -->
-<!-- 										<div class="form-group" style="margin: 5px 0;"> -->
-<!-- 											<div class="col-sm-12"> -->
-<!-- 												<textarea class="form-control" id="textArea" -->
-<!-- 													name="areaSolicitacao.msg" placeholder="Mensagem"></textarea> -->
-<!-- 											</div> -->
-<!-- 										</div> -->
+							<!-- 							<div class="col-lg-12"> -->
+							<!-- 								<div id="basicFormExample"> -->
+							<!-- 									<form class="formBasic" role="form" -->
+							<%-- 										action="<c:url value="/sendMail"/>" method="post"> --%>
+							<!-- 										<div class="form-group"> -->
+							<!-- 											<div class="col-sm-12"> -->
+							<!-- 												<select class="form-control" -->
+							<!-- 													name="areaSolicitacao.atendimento"> -->
+							<!-- 													<option value="mg">Atendimento MG</option> -->
+							<!-- 													<option value="rj">Atendimento RJ</option> -->
+							<!-- 												</select> -->
+							<!-- 											</div> -->
+							<!-- 											<div class="col-sm-12" style="margin: 5px 0;"> -->
+							<!-- 												<select class="form-control" -->
+							<!-- 													name="areaSolicitacao.codAreaSolicitacao"> -->
+							<%-- 													<c:forEach var="areaS" items="${perfil.areaSolicList}"> --%>
+							<%-- 														<option value="${areaS.codAreaSolicitacao}">${areaS.nomeArea}</option> --%>
+							<%-- 													</c:forEach> --%>
+							<!-- 												</select> -->
+							<!-- 											</div> -->
+							<!-- 										</div> -->
+							<!-- 										<div class="form-group" style="margin: 5px 0;"> -->
+							<!-- 											<div class="col-sm-12"> -->
+							<!-- 												<textarea class="form-control" id="textArea" -->
+							<!-- 													name="areaSolicitacao.msg" placeholder="Mensagem"></textarea> -->
+							<!-- 											</div> -->
+							<!-- 										</div> -->
 
-<!-- 										<button type="submit" class="btn btn-default formBasicSubmit">Enviar</button> -->
+							<!-- 										<button type="submit" class="btn btn-default formBasicSubmit">Enviar</button> -->
 
-<!-- 									</form> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
+							<!-- 									</form> -->
+							<!-- 								</div> -->
+							<!-- 							</div> -->
 							<!-- /.col-lg-12 (nested) -->
 							<!-- End Basic Form Example -->
 
@@ -105,9 +105,9 @@
 			</a>
 				<ul class="dropdown-menu dropdown-scroll dropdown-tasks">
 
-<!-- 					Tasks Dropdown Footer -->
-<!-- 					<li class="dropdown-footer"><a href="#" id="popList">Listar -->
-<!-- 							Clientes</a></li> -->
+					<!-- 					Tasks Dropdown Footer -->
+					<!-- 					<li class="dropdown-footer"><a href="#" id="popList">Listar -->
+					<!-- 							Clientes</a></li> -->
 
 				</ul> <!-- /.dropdown-menu --></li>
 
@@ -116,29 +116,16 @@
 			<!-- end TASKS DROPDOWN -->
 
 			<!-- begin USER ACTIONS DROPDOWN -->
-<!-- 			<li class="dropdown"><a href="#" class="dropdown-toggle" -->
-<!-- 				data-toggle="dropdown"> <i class="fa fa-user"></i> <i -->
-<!-- 					class="fa fa-caret-down"></i> -->
-<!-- 			</a> -->
-<!-- 				<ul class="dropdown-menu dropdown-user"> -->
-<%-- 					<c:if test="${perfil.usuarios.usuarioWeb eq 1}"> --%>
-<%-- 						<li><a href="<c:url value="/usuario/form"/>" id="cadUsr"> --%>
-<!-- 								<i class="fa fa-user"></i> Cadastrar Usuário -->
-<!-- 						</a></li> -->
-<%-- 						<li><a href="<c:url value="/usuario/list"/>" id="listUsr"> --%>
-<!-- 								<i class="fa fa-user"></i> Listar Usuário -->
-<!-- 						</a></li> -->
-<%-- 					</c:if> --%>
-<%-- 					<c:if test="${perfil.usuarios.usuarioWeb eq 0}"> --%>
-<!-- 						<li><a href="#" id="altSenh"> <i class="fa fa-user"></i> -->
-<!-- 								Alterar Senha -->
-<!-- 						</a></li> -->
-<%-- 					</c:if> --%>
-<!-- 					<li class="divider"></li> -->
-<!-- 					<li><a class="logout_open" href="#logout"> <i -->
-<%-- 							class="fa fa-sign-out"></i> Logout <strong>${perfil.usuarios.nome}</strong> --%>
-<!-- 					</a></li> -->
-<!-- 				</ul> /.dropdown-menu</li> -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown"> <i class="fa fa-user"></i> <i
+					class="fa fa-caret-down"></i>
+			</a>
+				<ul class="dropdown-menu dropdown-user">
+					<li class="divider"></li>
+					<li><a class="logout_open" href="#logout"> <i
+							class="fa fa-sign-out"></i> Logout <strong>${usuarioComponente.funcionario.nome}</strong>
+					</a></li>
+				</ul> <!-- /.dropdown-menu --></li>
 			<!-- /.dropdown -->
 			<!-- end USER ACTIONS DROPDOWN -->
 

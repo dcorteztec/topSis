@@ -808,12 +808,12 @@ a:focus {
 
 .portlet-green,
 .portlet-green>.portlet-heading {
-    border-color: #00528f;
+    border-color: #0F5248;
 }
 
 .portlet-green>.portlet-heading {
     color: #fff;
-    background-color: #00528f;
+    background-color: #0F5248;
 }
 
 .portlet-orange,
@@ -1138,9 +1138,9 @@ fieldset[disabled] .btn-orange.active {
 }
 
 .btn-blue {
-    border-color: #2779b0;
+    border-color: #0F5248;
     color: #fff;
-    background-color: #2980b9;
+    background-color: #0F5248;
 }
 
 .btn-blue:hover,
@@ -1583,7 +1583,7 @@ a.google-plus-link:hover {
 }
 
 .login-banner h1.login{
-	background:url(../img/logo_previsao.png) center center;
+	background:url(../img/topLogin.png) center center;
 	display:block;
 	width:221px;
 	height:56px;

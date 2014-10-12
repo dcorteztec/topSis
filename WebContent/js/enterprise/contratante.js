@@ -14,9 +14,9 @@ $(window).load(function() {
 					$("#addDep")
 							.click(
 									function() {;
-										$("#divDependente")
+										$("#divDependenteadd")
 												.append(
-														" <div class='row' id='dependentes'> "
+														" <div class='row' id='dependentesadd'> "
 																+ " <div class='col-sm-8'>"
 																+ " <label for='exampleInputEmail1'>Dependente</label> "
 																+ " <input "

@@ -9,6 +9,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.diegomaia.vraptor.saci.annotation.LoggedIn;
+
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
@@ -16,21 +18,25 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.topSIS.DAO.interfaces.ContratanteDAO;
+import br.com.topSIS.componente.UsuarioComponente;
 import br.com.topSIS.model.Contratante;
 import br.com.topSIS.model.Dependente;
 
+@LoggedIn
 @Resource
 public class ContratanteController {
 
 	private final Result result;
 	private final ContratanteDAO contratanteDAO;
 	private final Validator validator;
+	private final UsuarioComponente usuarioComponente;
 
 	public ContratanteController(Result result, Validator validator,
-			ContratanteDAO contratanteDAO) {
+			ContratanteDAO contratanteDAO, UsuarioComponente usuarioComponente) {
 		this.result = result;
 		this.validator = validator;
 		this.contratanteDAO = contratanteDAO;
+		this.usuarioComponente = usuarioComponente;
 	}
 
 	@Path("/contratante/form")
@@ -51,8 +57,7 @@ public class ContratanteController {
 	@Get
 	public void formEdit(Contratante contratante) {
 
-		Contratante contra = contratanteDAO
-				.findById(contratante.getMatricula());
+		Contratante contra = contratanteDAO.findById(contratante.getMatricula());
 
 		result.include("contratante", contra);
 
@@ -88,6 +93,7 @@ public class ContratanteController {
 
 				contratante.setDependentes(dependentes);
 			}
+			contratante.setFuncionario(usuarioComponente.getFuncionario().getNome());
 			contratanteDAO.addOrUpdate(contratante);
 			result.redirectTo(this).list();
 		} else {
@@ -132,6 +138,7 @@ public class ContratanteController {
 
 			contratante.setDependentes(dependentes);
 		}
+		contratante.setFucnionarioEdit(usuarioComponente.getFuncionario().getNome());
 		contratanteDAO.merge(contratante);
 		result.redirectTo(this).list();
 	}

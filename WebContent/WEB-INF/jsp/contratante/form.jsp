@@ -170,9 +170,17 @@
 													</div>
 												</div>
 												<div class="row">
+													<div class="col-sm-4">
+														<label for="exampleInputEmail1">CEP</label> <input
+															type="text" class="form-control"
+															id="cep" maxlength="9" required=""
+															name="contratante.endereco.cep" placeholder="CEP">
+													</div>
+												</div>
+												<div class="row">
 													<div class="col-sm-10">
 														<label for="exampleInputEmail1">Logradouro</label> <input
-															class="form-control" id="contratante.endereco.logradouro"
+															class="form-control" id="rua"
 															maxlength="40" required=""
 															name="contratante.endereco.logradouro"
 															placeholder="Logradouro">
@@ -181,7 +189,7 @@
 												<div class="row">
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Número</label> <input
-															class="form-control" id="contratante.endereco.numero"
+															class="form-control" id="numero"
 															maxlength="8" required=""
 															name="contratante.endereco.numero"
 															placeholder="Número">
@@ -189,13 +197,13 @@
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Complemento</label> <input
 															type="text" class="form-control"
-															id="contratante.complemento" maxlength="20"
+															id="complemento" maxlength="20"
 															name="contratante.endereco.complemento"
 															placeholder="Complemento">
 													</div>
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Cidade</label> <input
-															class="form-control" id="contratante.endereco.cidade"
+															class="form-control" id="cidade"
 															maxlength="20" required=""
 															name="contratante.endereco.cidade" placeholder="Cidade">
 													</div>
@@ -203,20 +211,14 @@
 												<div class="row">
 													<div class="col-sm-4">
 														<label for="exampleInputEmail1">Bairro</label> <input
-															class="form-control" id="contratante.endereco.bairro"
+															class="form-control" id="bairro"
 															maxlength="20" required=""
 															name="contratante.endereco.bairro" placeholder="Bairro">
-													</div>
-													<div class="col-sm-4">
-														<label for="exampleInputEmail1">CEP</label> <input
-															type="text" class="form-control"
-															id="contratante.endereco.cep" maxlength="9" required=""
-															name="contratante.endereco.cep" placeholder="CEP">
 													</div>
 													<div class="col-sm-2">
 														<label for="exampleInputEmail1">UF</label> <input
 															type="text" class="form-control"
-															id="contratante.endereco.uf" maxlength="2" required=""
+															id="uf" maxlength="2" required=""
 															name="contratante.endereco.uf" placeholder="UF">
 													</div>
 												</div>
@@ -241,7 +243,7 @@
 															Dependente</button>
 													</div>
 												</div>
-												<div id="divDependente"></div>
+												<div id="divDependenteadd"></div>
 												<button type="submit" class="btn btn-default">Enviar</button>
 
 											</form>

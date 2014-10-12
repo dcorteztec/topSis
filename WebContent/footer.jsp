@@ -31,10 +31,10 @@
 		</ul>
 	</div>
 </div>
-<div id="refreshDeducao"></div>
 <!-- Enterprise -->
 <script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 <script src="/topSIS/js/enterprise/scriptcam.js"></script>
+<script src="/topSIS/js/enterprise/webServiceClientCEP.js"></script>
 <script src="/topSIS/js/enterprise/contratante.js"></script>
 <script src="/topSIS/js/enterprise/contratanteEdit.js"></script>
 <script src="/topSIS/js/utils.js"  charset="UTF-8"></script>

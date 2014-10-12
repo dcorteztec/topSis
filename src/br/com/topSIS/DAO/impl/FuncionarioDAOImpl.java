@@ -29,7 +29,7 @@ public class FuncionarioDAOImpl extends GenericDAOImpl<Funcionario, Long>
 
 	@SuppressWarnings("unchecked")
 	public List<Funcionario> listFuncionario() {
-		String hql = "FROM Contratante c WHERE c.tipo = 'F' ";
+		String hql = "FROM Funcionario c WHERE c.tipo = 'F' ";
 		Query query = session.createQuery(hql);
 		return (List<Funcionario>) query.list();
 	}

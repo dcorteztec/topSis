@@ -19,7 +19,7 @@ $(window).load(function() {
 			$('#fotoNova').show();
 			$('#fotoBanco').show();
 		});
-		$("#addDep")
+		$("#addDepEdit")
 				.click(
 						function() {;
 							$("#divDependente")

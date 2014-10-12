@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reciboDePlano" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e6f2a811-fca9-4f89-806f-79ce948f3089">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="156" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="11" width="197" height="63" uuid="69cf7045-200d-480c-a898-6c9fee45c966"/>
+				<imageExpression><![CDATA["C:\\Users\\Cortez\\workspace\\topSIS\\WebContent\\img\\topLogin.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="210" y="0" width="345" height="21" forecolor="#006633" uuid="103e7768-0a2f-4ccc-8938-417b3e1a0e7c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Top Clim Serviços Médicos de Vila de Cava Ltda-ME 	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="21" width="345" height="21" forecolor="#006633" uuid="dc8d5861-ac43-4f7e-aa82-66a03cf0c1ce"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[CNPJ: 16.530.468/0001-28]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="42" width="345" height="21" forecolor="#006633" uuid="4be1c501-f268-496b-8890-aa1bb76e1611"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Rua Muniz Barreto, s/n° lote 33 quadra 29]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="63" width="345" height="21" forecolor="#006633" uuid="c7fcf8e3-49df-4716-8a87-8bc55e5d31dd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Vila de Cava]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="84" width="345" height="21" forecolor="#006633" uuid="596e7674-79d1-429b-aa5e-e8cf80ee0726"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Telefone: (21) 2698-3211 - Nova Iguaçu - RJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="118" width="418" height="38" forecolor="#006633" uuid="03246ad9-ae71-493b-8497-6e4067505945"/>
+				<textElement>
+					<font fontName="Arial Black" size="24"/>
+				</textElement>
+				<text><![CDATA[Cliente Top Clim N°]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="153" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="345" height="21" forecolor="#006633" uuid="5ea20ac5-532f-434b-b593-0b096d5732fc"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Recebi do(a) Sr.(s)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="345" height="21" forecolor="#006633" uuid="c7de1bb7-706b-48ae-9876-500152001a1d"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[A quantia de R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="46" width="555" height="21" forecolor="#006633" uuid="525d5dfe-f919-447c-ab6c-f2c295fd7892"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[referente a TAXA DE INCRIÇÃO; devendo as mesansilidades no valor R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="555" height="21" forecolor="#006633" uuid="fe372e94-9273-46a3-a74d-1c3aed82b615"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[, serem pagas sempre, até data de vencimento, a partir de 30 dias da data ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="88" width="345" height="21" forecolor="#006633" uuid="c54cdcfb-eba2-46fd-8a36-0aa1e8c8b35b"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[da assinatura do contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="133" width="113" height="20" forecolor="#006633" uuid="2b17dfd2-4e49-4bb4-8703-0c3a6f22744e"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Nova Iguaçu,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="389" y="133" width="166" height="20" forecolor="#006633" uuid="45a6cc87-fe69-434c-bb5e-90bce86a7d30"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement x="64" y="12" width="491" height="26" forecolor="#006633" uuid="54ddf940-6a25-477b-ad81-bdcc4141e838"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Corretor:________________________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="38" width="491" height="26" forecolor="#006633" uuid="a975cb76-cb7c-4636-b4aa-c47ffcec00fc"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Sócio:___________________________________________________________]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
